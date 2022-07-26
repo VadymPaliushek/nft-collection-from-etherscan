@@ -36,6 +36,11 @@ npm install -g moralis-admin-cli
 
 2. Execute the watch-cloud-file and change to the correct path of your cloud file
 
-moralis-admin-cli watch-cloud-file --moralisApiKey (your cli api key) --moralisApiSecret (your cli secret) --moralisSubdomain (your moralis sub domain) --autoSave 1 -p ./javascript/cloud.js
+   moralis-admin-cli watch-cloud-file --moralisApiKey (your cli api key) --moralisApiSecret (your cli secret) --moralisSubdomain (your moralis sub domain) --autoSave 1 -p ./javascript/cloud.js
+   
+   - how to find the cli api key and secret.
+    -- Click the image button on the right top screen and click the account settings.
+    -- Click the Keys button.
+    -- Copy the Cli api key and secret, and paste them into the above directive.
 
-** you can copy the directive in the cloud function section, and change "moralis-admin-cli watch-cloud-folder" to "moralis-admin-cli watch-cloud-file" and the moralis cloud file path, "--moralisCloudfolder /path/to/cloud/folder" to "-p ./javascript/cloud.js".
+   ==== instead of finding your cli data, you can copy the directive in the cloud function section, and change "moralis-admin-cli watch-cloud-folder" to "moralis-admin-cli watch-cloud-file" and the moralis cloud file path, "--moralisCloudfolder /path/to/cloud/folder" to "-p ./javascript/cloud.js".
