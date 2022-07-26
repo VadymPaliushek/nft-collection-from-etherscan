@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>nft collection</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <style>
+        table, td, th {
+            border: 1px solid;
+        }
+
+        th {
+            background-color: #d8b02d;
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div style="text-align: center;">
+        <h3>ENTER WALLET ADDRESS</h3>
+        <input type="text" placeholder="input address" id="nft_address" style="width: 450px;">
+        <button id="search_btn">Search</button>
+        <p>Balance:</p>
+        <p id="balance_eth" style="font-weight: 700;"></p>
+        <p>Total number of Transactions</p>
+        <p id="number_transaction" style="font-weight: 700;"></p>
+        <h1>ETH TRANSACTIONS</h1>
+    </div>
+    <table id="eth_table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Transaction Hash</th>
+                <th>Transaction Type</th>
+                <th>NFT Collection</th>
+                <th>Token ID</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+    </table>
+    <div>
+        <button id="prev_btn">Prev</button>
+        <button id="next_btn">Next</button>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
