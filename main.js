@@ -15,14 +15,14 @@ const tableElement = document.getElementById('eth_table');
 async function search() {
 
     const results = await Moralis.Cloud.run("getAvgGas");
-
+    clearTable()
     pages = 1
     console.log("start search")
     nft_address = document.getElementById("nft_address").value; 
     const options = {
         chain: "eth",
         address: nft_address,
-        limit: "100"
+        limit: "10"
     };
     const balanceData = await Moralis.Web3API.account.getNativeBalance(options);
     console.log("balances===", balanceData)
@@ -76,7 +76,10 @@ async function createTable(counts) {
         const nameEle = document.createElement('td');
         const idEle = document.createElement('td');
         const amountEle = document.createElement('td');
-        dateEle.innerHTML = nftMetadata.result[i].block_timestamp;
+        const timestamp = nftMetadata.result[i].block_timestamp;
+        let timedate = timestamp.replace("T", "  ")
+        let strlength = timedate.length
+        dateEle.innerHTML = timedate.substr(0, strlength - 5);
         hashEle.innerHTML = nftMetadata.result[i].transaction_hash;
         if (nft_address.toLowerCase() == nftMetadata.result[i].to_address.toLowerCase()){
             typeEle.innerHTML = "Buy";
