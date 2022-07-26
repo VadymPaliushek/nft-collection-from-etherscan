@@ -52,7 +52,9 @@ async function search() {
         page_loading = true
     } else {
         const tbodyElement = document.createElement('tbody');
-        tbodyElement.innerHTML = "No match data"
+        const trElement = document.createElement('tr');
+        trElement.innerHTML = "No match data"
+        tbodyElement.appendChild(trElement);
         tableElement.appendChild(tbodyElement);
     }
     console.log(nftMetadata)
