@@ -1,4 +1,5 @@
 /* Moralis init code */
+
 const serverUrl = "https://qwc8bpvxdutd.usemoralis.com:2053/server";
 const appId = "QbZQTZCfdk5WZRfgVdC5ccEEW9x30Di8KYd8EUAq";
 
