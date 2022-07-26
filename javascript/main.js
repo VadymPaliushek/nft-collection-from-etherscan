@@ -103,7 +103,7 @@ async function createTable(counts) {
         // }
         nameEle.innerHTML = nftNames[i];
         idEle.innerHTML = nftMetadata.result[i].token_id;
-        amountEle.innerHTML = (Number(nftMetadata.result[i].value) / (10 ** 18).toFixed(4));
+        amountEle.innerHTML = (Number(nftMetadata.result[i].value) / (10 ** 18)).toFixed(4);
         trElement.appendChild(dateEle);
         trElement.appendChild(hashEle);
         trElement.appendChild(typeEle);
