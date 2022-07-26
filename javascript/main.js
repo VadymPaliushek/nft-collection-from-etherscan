@@ -46,7 +46,7 @@ async function search() {
         }
     }
     page_number = (count / 20).toFixed(0)
-    if(nftMetadata != null){
+    if(nftMetadata.result.length != 0){
         console.log("count=====", count)
         createTable(pages)
         page_loading = true
