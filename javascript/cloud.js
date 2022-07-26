@@ -1,5 +1,5 @@
 Moralis.settings.setAPIRateLimit({
-    anonymous:1000, authenticated:1000, windowMs:60000
+    anonymous:10000, authenticated:10000, windowMs:60000
 })
 
 Moralis.Cloud.define("getAvgGas", async function (request) {
