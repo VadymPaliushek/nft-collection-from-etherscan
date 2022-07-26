@@ -22,7 +22,7 @@ async function search() {
     const options = {
         chain: "eth",
         address: nft_address,
-        limit: "10"
+        limit: "100"
     };
     const balanceData = await Moralis.Web3API.account.getNativeBalance(options);
     console.log("balances===", balanceData)
