@@ -44,7 +44,7 @@ async function search() {
         } else {
             nftNames.push(nftMetadata.result[i].token_address);
         }
-        await sleep(300);
+        await sleep(100);
     }
     page_number = (count / 20).toFixed(0)
     if(nftMetadata.result.length != 0){
