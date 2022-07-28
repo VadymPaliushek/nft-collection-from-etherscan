@@ -44,6 +44,7 @@ async function search() {
         } else {
             nftNames.push(nftMetadata.result[i].token_address);
         }
+        await sleep(300);
     }
     page_number = (count / 20).toFixed(0)
     if(nftMetadata.result.length != 0){
@@ -117,6 +118,10 @@ async function createTable(counts) {
         tableElement.appendChild(tbodyElement);
     }
 }
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+ }
 
 function previouspage() {
     if(page_loading && pages > 1) {
